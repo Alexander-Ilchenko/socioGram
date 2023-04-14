@@ -1,0 +1,31 @@
+.container {
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background: #f0f0f02e;
+}
+.my_photo {
+  margin: 20px 20px 20px auto;
+  border-radius: 5px;
+  box-shadow: -6px 6px 8px #2b2929;
+}
+.my_photo h3 {
+  display: block;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #aba8a8;
+  padding-left: 50px;
+}
+.photos {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+.photo_item {
+  border-radius: 5px;
+  width: 150px;
+  height: 100px;
+}
+.photo_item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
