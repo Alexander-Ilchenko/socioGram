@@ -1,0 +1,16 @@
+.container {
+  box-shadow: -6px 6px 8px #491a02;
+  margin-bottom: 20px;
+  list-style: none;
+  padding: 20px 30px;
+  background: #f0f0f02e;
+  box-shadow: -6px 6px 8px #2b2929;
+  border-radius: 5px;
+}
+.item_wrupper {
+}
+.item_wrupper img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
