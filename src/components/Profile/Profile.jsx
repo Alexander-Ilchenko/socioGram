@@ -6,11 +6,9 @@ import MyPosts from "./MyPosts/MyPosts";
 const Profile = () => {
   return (
     <main className={st.main}>
-      <div className={st.container}>
-        <User />
-        <MyPhotos />
-        <MyPosts />
-      </div>
+      <User />
+      <MyPhotos />
+      <MyPosts />
     </main>
   );
 };
