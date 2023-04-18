@@ -9,7 +9,18 @@
   padding-top: 50px;
   padding-left: 50px;
 }
-.nav li {
+.item {
   margin-bottom: 10px;
   list-style: none;
+}
+.item a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.item a:hover {
+  color: #ee5e0a;
+}
+.item a .active {
+  font-size: 1.4em;
+  color: #ee5e0a;
 }

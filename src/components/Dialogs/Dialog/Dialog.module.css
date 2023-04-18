@@ -1,0 +1,44 @@
+.container {
+  margin-bottom: 20px;
+  list-style: none;
+  padding: 5px 150px 20px 30px;
+  background: #f0f0f02e;
+  box-shadow: -6px 6px 8px #491a02;
+  border-radius: 5px;
+  position: relative;
+}
+.dialog_list_item {
+  display: flex;
+  column-gap: 50px;
+}
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user h3 {
+  font-size: 18px;
+  color: #b9b6b6;
+}
+.span {
+  padding-top: 30px;
+  display: inline-block;
+}
+.item_wrupper {
+  display: flex;
+  align-items: center;
+}
+
+.user img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.date {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  left: auto;
+  bottom: auto;
+  font-weight: 400;
+}
