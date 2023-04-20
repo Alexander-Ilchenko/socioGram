@@ -19,11 +19,11 @@ function App() {
         <Navbar />
         <div className="content-wrupper">
           <Routes>
-            <Route path="/profile" Component={Profile} />
-            <Route path="/dialogs" Component={Dialogs} />
-            <Route path="/news" Component={News} />
-            <Route path="/music" Component={Music} />
-            <Route path="/settings" Component={Settings} />
+            <Route exact path="/profile" Component={Profile} />
+            <Route exact path="/dialogs" Component={Dialogs} />
+            <Route exact path="/news" Component={News} />
+            <Route exact path="/music" Component={Music} />
+            <Route exact path="/settings" Component={Settings} />
           </Routes>
         </div>
         <Footer />
