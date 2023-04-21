@@ -3,12 +3,12 @@ import st from "./Profile.module.css";
 import User from "./User/User";
 import MyPhotos from "./MyPhotos/MyPhotos";
 import MyPosts from "./MyPosts/MyPosts";
-const Profile = () => {
+const Profile = (props) => {
   return (
     <main className={st.main}>
       <User />
       <MyPhotos />
-      <MyPosts />
+      <MyPosts posts={props.state.posts} />
     </main>
   );
 };

@@ -11,7 +11,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 
-function App() {
+function App(props) {
   return (
     <BrowserRouter>
       <div className="wrupper">
@@ -19,11 +19,17 @@ function App() {
         <Navbar />
         <div className="content-wrupper">
           <Routes>
-            <Route exact path="/profile" Component={Profile} />
-            <Route exact path="/dialogs" Component={Dialogs} />
-            <Route exact path="/news" Component={News} />
-            <Route exact path="/music" Component={Music} />
-            <Route exact path="/settings" Component={Settings} />
+            <Route
+              path="/profile"
+              element={<Profile state={props.state.profilePage} />}
+            />
+            <Route
+              path="/dialogs"
+              element={<Dialogs state={props.state.messagesPage} />}
+            />
+            <Route path="/news" element={<News />} />
+            <Route path="/music" element={<Music />} />
+            <Route path="/settings" element={<Settings />} />
           </Routes>
         </div>
         <Footer />
