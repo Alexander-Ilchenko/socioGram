@@ -8,7 +8,12 @@ const Profile = (props) => {
     <main className={st.main}>
       <User />
       <MyPhotos />
-      <MyPosts posts={props.state.posts} />
+      <MyPosts
+        newPostText={props.state.newPostText}
+        posts={props.state.posts}
+        addPost={props.addPost}
+        changeNewPostText={props.changeNewPostText}
+      />
     </main>
   );
 };
