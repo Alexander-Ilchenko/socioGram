@@ -3,14 +3,20 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import store from "./redux/state";
+import { BrowserRouter } from "react-router-dom";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 let rerenderApp = (state) => {
   root.render(
-    <App
-      state={state}
-      addPost={store.addPost.bind(store)}
-      changeNewPostText={store.changeNewPostText.bind(store)}
-    />
+    <BrowserRouter>
+      <App
+        state={state}
+        addPost={store.addPost.bind(store)}
+        changeNewPostText={store.changeNewPostText.bind(store)}
+        sendMessage={store.sendMessage.bind(store)}
+        changeNewMessageText={store.changeNewMessageText.bind(store)}
+      />
+    </BrowserRouter>
   );
 };
 

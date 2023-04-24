@@ -1,0 +1,23 @@
+.container {
+  padding: 0px 200px 0px 50px;
+}
+.container_me {
+  padding: 0px 50px 0px 200px;
+}
+.container .text {
+  margin-top: 0;
+  padding: 10px 10px;
+  background: #01461a;
+  border-radius: 15px;
+}
+.container_me .text {
+  margin-top: 0;
+  padding: 10px 10px;
+  background: #030b54;
+  border-radius: 15px;
+  text-align: end;
+}
+h4 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}

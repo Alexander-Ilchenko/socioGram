@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   color: #fff;
   background: #1b1414;
@@ -19,6 +23,7 @@ a {
   margin: 0 auto;
 }
 .content-wrupper {
+  min-height: 100vh;
   background: #f0f0f035;
   grid-area: main;
   border-radius: 5px;
