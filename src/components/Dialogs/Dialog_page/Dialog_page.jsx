@@ -1,6 +1,6 @@
 import React from "react";
 import st from "./Dialog_page.module.css";
-import store from "../../../redux/state";
+import store from "../../../redux/store";
 import Message from "./Message/Message";
 const Dialog_page = (props) => {
   let messagesElement = props.state.messagesPage.messages.Alex777.map(
@@ -14,13 +14,12 @@ const Dialog_page = (props) => {
       );
     }
   );
-  let newMessageElement = React.createRef();
 
   let sendNewMessage = () => {
     props.sendMessage();
   };
-  let onMessageChange = () => {
-    let text = newMessageElement.current.value;
+  let onMessageChange = (event) => {
+    let text = event.target.value;
     props.changeNewMessageText(text);
   };
   return (
@@ -31,7 +30,6 @@ const Dialog_page = (props) => {
         <div className={st.send_message}>
           <div className={st.input}>
             <input
-              ref={newMessageElement}
               type="text"
               onChange={onMessageChange}
               placeholder="type new message....."

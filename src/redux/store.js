@@ -75,7 +75,7 @@ let store = {
   sendMessage() {
     const newMessage = {
       userName: "Alex777",
-      class: "container",
+      class: "container_me",
       text: this._state.messagesPage.messages.newMessageText,
     };
     this._state.messagesPage.messages.Alex777.push(newMessage);
