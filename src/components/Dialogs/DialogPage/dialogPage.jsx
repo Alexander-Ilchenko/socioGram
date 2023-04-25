@@ -3,7 +3,7 @@ import st from "./dialogPage.module.css";
 import {
   sendMessageActionCreator,
   changeNewMesaageTextActionCreator,
-} from "../../../redux/store";
+} from "../../../redux/redux-store";
 
 import Message from "./Message/Message";
 const DialogPage = (props) => {

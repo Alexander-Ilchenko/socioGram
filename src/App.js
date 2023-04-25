@@ -11,7 +11,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import DialogPage from "./components/Dialogs/DialogPage/dialogPage";
-
 function App(props) {
   return (
     <div className="wrupper">
