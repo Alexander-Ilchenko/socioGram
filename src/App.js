@@ -10,7 +10,7 @@ import News from "./components/News/News";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
-import Dialog_page from "./components/Dialogs/Dialog_page/Dialog_page";
+import DialogPage from "./components/Dialogs/DialogPage/dialogPage";
 
 function App(props) {
   return (
@@ -24,8 +24,7 @@ function App(props) {
             element={
               <Profile
                 state={props.state.profilePage}
-                addPost={props.addPost}
-                changeNewPostText={props.changeNewPostText}
+                dispatch={props.dispatch}
               />
             }
           />
@@ -39,11 +38,7 @@ function App(props) {
           <Route
             path="/dialogs/Alex333"
             element={
-              <Dialog_page
-                state={props.state}
-                sendMessage={props.sendMessage}
-                changeNewMessageText={props.changeNewMessageText}
-              />
+              <DialogPage state={props.state} dispatch={props.dispatch} />
             }
           />
         </Routes>

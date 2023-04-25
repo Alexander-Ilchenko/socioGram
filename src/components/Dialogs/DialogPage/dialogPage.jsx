@@ -1,8 +1,12 @@
 import React from "react";
-import st from "./Dialog_page.module.css";
-import store from "../../../redux/store";
+import st from "./dialogPage.module.css";
+import {
+  sendMessageActionCreator,
+  changeNewMesaageTextActionCreator,
+} from "../../../redux/store";
+
 import Message from "./Message/Message";
-const Dialog_page = (props) => {
+const DialogPage = (props) => {
   let messagesElement = props.state.messagesPage.messages.Alex777.map(
     (message) => {
       return (
@@ -16,11 +20,11 @@ const Dialog_page = (props) => {
   );
 
   let sendNewMessage = () => {
-    props.sendMessage();
+    props.dispatch(sendMessageActionCreator);
   };
   let onMessageChange = (event) => {
     let text = event.target.value;
-    props.changeNewMessageText(text);
+    props.dispatch(changeNewMesaageTextActionCreator(text));
   };
   return (
     <main className={st.main}>
@@ -46,4 +50,4 @@ const Dialog_page = (props) => {
     </main>
   );
 };
-export default Dialog_page;
+export default DialogPage;
