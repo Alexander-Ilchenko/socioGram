@@ -2,17 +2,13 @@ import React from "react";
 import st from "./Profile.module.css";
 import User from "./User/User";
 import MyPhotos from "./MyPhotos/MyPhotos";
-import MyPosts from "./MyPosts/MyPosts";
+import MyPostsContainer from "./MyPosts/MyPostsContainer";
 const Profile = (props) => {
   return (
     <main className={st.main}>
       <User />
       <MyPhotos />
-      <MyPosts
-        newPostText={props.state.newPostText}
-        posts={props.state.posts}
-        dispatch={props.dispatch}
-      />
+      <MyPostsContainer store={props.store} />
     </main>
   );
 };
