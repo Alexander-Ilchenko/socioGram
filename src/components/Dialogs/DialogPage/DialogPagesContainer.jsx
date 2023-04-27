@@ -4,20 +4,19 @@ import {
   sendMessageActionCreator,
   changeNewMesaageTextActionCreator,
 } from "../../../redux/redux-store";
-import DialogPage from "./DialogPage";
+import DialogPageAlex777 from "./DialogPageAlex777";
 
 const DialogPageContainer = (props) => {
   let state = props.store.getState();
 
   let sendNewMessage = () => {
-    props.store.dispatch(sendMessageActionCreator);
+    props.store.dispatch(sendMessageActionCreator());
   };
-  let changeNewMesaageText = (event) => {
-    let text = event.target.value;
+  let changeNewMesaageText = (text) => {
     props.store.dispatch(changeNewMesaageTextActionCreator(text));
   };
   return (
-    <DialogPage
+    <DialogPageAlex777
       sendNewMessage={sendNewMessage}
       changeNewMesaageText={changeNewMesaageText}
       state={state}

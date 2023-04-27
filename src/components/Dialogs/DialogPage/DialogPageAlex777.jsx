@@ -1,7 +1,7 @@
 import React from "react";
 import st from "./DialogPage.module.css";
 import Message from "./Message/Message";
-const DialogPage = (props) => {
+const DialogPageAlex777 = (props) => {
   let messagesElement = props.state.messagesPage.messages.Alex777.map(
     (message) => {
       return (
@@ -45,4 +45,4 @@ const DialogPage = (props) => {
     </main>
   );
 };
-export default DialogPage;
+export default DialogPageAlex777;

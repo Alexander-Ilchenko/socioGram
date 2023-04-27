@@ -14,9 +14,7 @@ let SEND_MESSAGE = "SEND_MESSAGE";
 let CHANGE_NEW_MESSAGE_TEXT = "CHANGE_NEW_MESSAGE_TEXT";
 
 export const addPostActionCreator = () => {
-  return {
-    type: ADD_POST,
-  };
+  return { type: ADD_POST };
 };
 export const changeNewPostTextActionCreator = (text) => {
   return {
