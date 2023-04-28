@@ -16,10 +16,9 @@ const profileReducer = (state = intialState, action) => {
     let newPost = {
       text: state.newPostText,
     };
-    state.posts.push(newPost);
-    state.newPostText = "";
+    return { ...state, posts: [...state.posts, newPost], newPostText: "" };
   } else if (action.type === CHANGE_NEW_POST_TEXT) {
-    state.newPostText = action.newText;
+    return { ...state, newPostText: action.newText };
   }
   return state;
 };

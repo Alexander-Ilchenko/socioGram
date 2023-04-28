@@ -3,18 +3,16 @@ import st from "./Dialogs.module.css";
 import Dialog from "./Dialog/Dialog";
 
 const Dialogs = (props) => {
-  let dialogElements = props.store
-    .getState()
-    .messagesPage.dialogs.map((dialog) => {
-      return (
-        <Dialog
-          id={dialog.id}
-          userName={dialog.userName}
-          text={dialog.text}
-          date={dialog.date}
-        />
-      );
-    });
+  let dialogElements = props.state.messagesPage.dialogs.map((dialog) => {
+    return (
+      <Dialog
+        id={dialog.id}
+        userName={dialog.userName}
+        text={dialog.text}
+        date={dialog.date}
+      />
+    );
+  });
   return (
     <main className={st.main}>
       <h1>My Dialogs</h1>

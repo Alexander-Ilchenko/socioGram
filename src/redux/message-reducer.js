@@ -51,10 +51,19 @@ const messagesReducer = (state = initialState, action) => {
       class: "container_me",
       text: state.messages.newMessageText,
     };
-    state.messages.Alex777.push(newMessage);
-    state.messages.newMessageText = "";
+    return {
+      ...state,
+      messages: {
+        ...state.messages,
+        Alex777: [...state.messages.Alex777, newMessage],
+        newMessageText: "",
+      },
+    };
   } else if (action.type === CHANGE_NEW_MESSAGE_TEXT) {
-    state.messages.newMessageText = action.newMessage;
+    return {
+      ...state,
+      messages: { ...state.messages, newMessageText: action.newMessage },
+    };
   }
   return state;
 };

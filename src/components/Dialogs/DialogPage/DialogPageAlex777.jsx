@@ -2,17 +2,15 @@ import React from "react";
 import st from "./DialogPage.module.css";
 import Message from "./Message/Message";
 const DialogPageAlex777 = (props) => {
-  let messagesElement = props.state.messagesPage.messages.Alex777.map(
-    (message) => {
-      return (
-        <Message
-          class={message.class}
-          userName={message.userName}
-          text={message.text}
-        />
-      );
-    }
-  );
+  let messagesElement = props.messagesPage.messages.Alex777.map((message) => {
+    return (
+      <Message
+        class={message.class}
+        userName={message.userName}
+        text={message.text}
+      />
+    );
+  });
 
   let onSendMessage = () => {
     props.sendNewMessage();
@@ -32,7 +30,7 @@ const DialogPageAlex777 = (props) => {
               type="text"
               onChange={onMessageChange}
               placeholder="type new message....."
-              value={props.state.messagesPage.messages.newMessageText}
+              value={props.messagesPage.messages.newMessageText}
             />
           </div>
           <div className={st.btn}>
